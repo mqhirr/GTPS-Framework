@@ -3,7 +3,10 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+
 #include "macros.h"
+
+#include <enet/enet.h>
 
 namespace framework
 {
@@ -14,6 +17,8 @@ namespace framework
             ~server();
 
         private:
+            ENetHost* m_server;
+            ENetAddress m_address;
             /* Special Values */
             int m_sid; // Server identifier
             std::string m_name; // Server name
