@@ -1,13 +1,13 @@
-#define FRAMEWORK_EXPORT __declspec(dllexport)
 #ifndef __GTPSFRAMEWORK__SERVER__SERVER_H__
 #define __GTPSFRAMEWORK__SERVER__SERVER_H__
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include "macros.h"
 
 namespace framework
 {
-    class server
+    FRAMEWORK_EXPORT class server
     {
         public:
             server(std::string name, uint16_t port, size_t max_players);

@@ -1,16 +1,20 @@
-#define FRAMEWORK_EXPORT __declspec(dllexport)
 #ifndef __GTPSFRAMEWORK__PLAYER__PLAYER_H__
 #define __GTPSFRAMEWORK__PLAYER__PLAYER_H__
 #include <iostream>
 #include <vector>
 #include <unordered_map>
 
+#include <fmt/core.h>
+#include <enet/enet.h>
+
+#include "macros.h"
+
 namespace framework
 {
     FRAMEWORK_EXPORT class player
     {
         public:
-            player(/*ENetPeer* peer*/);
+            player(ENetPeer* peer);
             ~player();
 
             FRAMEWORK_EXPORT void set_uid(int id) { this->m_uid = id; }
@@ -22,7 +26,7 @@ namespace framework
             FRAMEWORK_EXPORT void greet(); // TODO: implement greeting (which accepts login)
             FRAMEWORK_EXPORT void content(); // TODO: implement content (which sends cache data, etc.)
         private:
-            // ENetPeer* m_peer; // TODO: Add and link ENet
+            ENetPeer* m_peer;
             int m_uid; // Unique ID
             int m_net_id; // Network ID
             int m_hash; // Hash of the player
