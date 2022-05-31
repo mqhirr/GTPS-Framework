@@ -1,6 +1,6 @@
 #ifndef __MACROS_H__
 #define __MACROS_H__
-#ifdef WIN32
+#ifdef _WIN32
 #ifdef FRAMEWORK_DLL
 #ifdef FRAMEWORK_LIB
     #define FRAMEWORK_EXPORT __declspec(dllexport)
