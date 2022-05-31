@@ -1,0 +1,1 @@
+#define FRAMEWORK_EXPORT __declspec(dllexport)
