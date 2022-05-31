@@ -2,7 +2,7 @@
 #define __GTPSFRAMEWORK__LOGGER__LOGGER_H__
 #include <fmt/core.h>
 
-#include "macros.h"
+#include "config/macros.h"
 
 namespace framework
 {

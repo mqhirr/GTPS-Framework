@@ -7,7 +7,7 @@
 #include <fmt/core.h>
 #include <enet/enet.h>
 
-#include "macros.h"
+#include "config/macros.h"
 #include "logger/logger.h"
 
 namespace framework

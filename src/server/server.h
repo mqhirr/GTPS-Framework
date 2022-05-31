@@ -5,7 +5,7 @@
 #include <unordered_map>
 
 #include "logger/logger.h"
-#include "macros.h"
+#include "config/macros.h"
 
 #include <enet/enet.h>
 
