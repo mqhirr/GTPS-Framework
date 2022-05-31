@@ -36,6 +36,7 @@ namespace framework
             /* ENet Values */
             ENetHost* m_server; // ENetHost
             ENetAddress m_address; // ENetAddress
+            ENetEvent m_event;
             uint16_t m_port; // Server port
             size_t m_max_players; // Max players
     };
