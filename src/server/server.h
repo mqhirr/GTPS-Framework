@@ -21,7 +21,7 @@ namespace framework
             FRAMEWORK_EXPORT server(const ENetEvent& event, const std::string& name, const uint16_t& port, const size_t& max_players);
             FRAMEWORK_EXPORT ~server();
 
-            FRAMEWORK_EXPORT void add_player(player* p_) { m_players.insert_or_assign(p_->get_uid(), p_); }
+            FRAMEWORK_EXPORT void add_player(player* p_);
             FRAMEWORK_EXPORT void broadcast(const std::function<void(player*)>& f_);
 
         private:
