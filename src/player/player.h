@@ -8,6 +8,7 @@
 #include <enet/enet.h>
 
 #include "macros.h"
+#include "logger/logger.h"
 
 namespace framework
 {
@@ -15,18 +16,25 @@ namespace framework
     {
         public:
             player(ENetPeer* peer);
+            player();
             ~player();
 
-            FRAMEWORK_EXPORT void set_uid(int id) { this->m_uid = id; }
-            FRAMEWORK_EXPORT int get_uid() { return this->m_uid; }
+            FRAMEWORK_EXPORT void set_uid(const int& id) { m_uid = id; }
+            FRAMEWORK_EXPORT int get_uid() { return m_uid; }
 
-            FRAMEWORK_EXPORT void set_net_id(int id) { this->m_net_id = id; }
-            FRAMEWORK_EXPORT int get_net_id() { return this->m_uid; }
+            FRAMEWORK_EXPORT void set_net_id(const int& id) { m_net_id = id; }
+            FRAMEWORK_EXPORT int get_net_id() { return m_net_id; }
 
             FRAMEWORK_EXPORT void greet(); // TODO: implement greeting (which accepts login)
             FRAMEWORK_EXPORT void content(); // TODO: implement content (which sends cache data, etc.)
         private:
-            ENetPeer* m_peer;
+            /* ENet Value */
+            ENetPeer* m_peer; // Peer value
+
+            /* Loggger */
+            logger* m_logger; // Logger value
+
+            /* Special Values */
             int m_uid; // Unique ID
             int m_net_id; // Network ID
             int m_hash; // Hash of the player

@@ -4,6 +4,7 @@
 #include <vector>
 #include <unordered_map>
 
+#include "logger/logger.h"
 #include "macros.h"
 
 #include <enet/enet.h>
@@ -13,17 +14,20 @@ namespace framework
     FRAMEWORK_EXPORT class server
     {
         public:
-            server(std::string name, uint16_t port, size_t max_players);
+            server(const std::string& name, const uint16_t& port, const size_t& max_players);
             ~server();
 
         private:
-            ENetHost* m_server;
-            ENetAddress m_address;
             /* Special Values */
             int m_sid; // Server identifier
             std::string m_name; // Server name
 
+            /* Logger */
+            logger* m_logger; // Logger value
+
             /* ENet Values */
+            ENetHost* m_server; // ENetHost
+            ENetAddress m_address; // ENetAddress
             uint16_t m_port; // Server port
             size_t m_max_players; // Max players
     };

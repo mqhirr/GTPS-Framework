@@ -9,6 +9,7 @@ add_library(
     player/player.cc
     player/player.h
 
+    server/server.cc
     server/server.h
 
     macros.h
