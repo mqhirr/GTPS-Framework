@@ -12,12 +12,12 @@
 
 namespace framework
 {
-    FRAMEWORK_EXPORT class player
+    class player
     {
         public:
-            player(ENetPeer* peer);
-            player();
-            ~player();
+            FRAMEWORK_EXPORT player(ENetPeer* peer);
+            FRAMEWORK_EXPORT player();
+            FRAMEWORK_EXPORT ~player();
 
             FRAMEWORK_EXPORT void set_uid(const int& id) { m_uid = id; }
             FRAMEWORK_EXPORT int get_uid() { return m_uid; }

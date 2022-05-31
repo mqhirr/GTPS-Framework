@@ -6,14 +6,14 @@
 
 namespace framework
 {
-    FRAMEWORK_EXPORT class logger
+    class logger
     {
         public:
-            FRAMEWORK_EXPORT enum log_types
+            enum log_types
             {
                 INFO,
                 WARNING,
-                ERROR,
+                ERR,
                 DEBUG
             };
             FRAMEWORK_EXPORT void log(std::string message, int type = log_types::INFO);

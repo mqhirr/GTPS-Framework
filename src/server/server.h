@@ -11,11 +11,11 @@
 
 namespace framework
 {
-    FRAMEWORK_EXPORT class server
+    class server
     {
         public:
-            server(const std::string& name, const uint16_t& port, const size_t& max_players);
-            ~server();
+            FRAMEWORK_EXPORT server(const std::string& name, const uint16_t& port, const size_t& max_players);
+            FRAMEWORK_EXPORT ~server();
 
         private:
             /* Special Values */

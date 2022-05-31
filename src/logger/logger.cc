@@ -13,7 +13,7 @@ namespace framework
             case log_types::WARNING:
                 type_string.append("[WARNING]");
                 break;
-            case log_types::ERROR:
+            case log_types::ERR:
                 type_string.append("[ERROR]");
                 break;
             case log_types::DEBUG:
