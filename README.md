@@ -1,8 +1,9 @@
 # GTPS-Framework
 A framework for Growtopia Private Server developers
+
 #### Building
 Clone this repo using </br>
-`$ git clone --recursive https://github.com/mqhirr/GTPS-Framework.git` </br>
+`$ git clone --recursive https://github.com/mqhirr/GTPS-Framework.git` (why recursive? because otherwise it wouldn't fetch submodules) </br>
 and then make your changes, then build it (using CMake) </br>
 
 # Non-Windows Platforms
