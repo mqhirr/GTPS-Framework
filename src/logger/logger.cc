@@ -2,7 +2,7 @@
 
 namespace framework
 {
-    void logger::log(std::string message, log_types type)
+    void logger::log(std::string message, int type)
     {
         std::string type_string = "";
         switch(type)

@@ -9,14 +9,14 @@ namespace framework
     FRAMEWORK_EXPORT class logger
     {
         public:
-            FRAMEWORK_EXPORT enum class log_types : int
+            FRAMEWORK_EXPORT enum log_types
             {
                 INFO,
                 WARNING,
                 ERROR,
                 DEBUG
             };
-            FRAMEWORK_EXPORT void log(std::string message, log_types type);
+            FRAMEWORK_EXPORT void log(std::string message, int type = log_types::INFO);
     };
 }
 #endif // __GTPSFRAMEWORK__LOGGER__LOGGER_H__
