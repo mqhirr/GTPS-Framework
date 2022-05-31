@@ -13,6 +13,7 @@ add_library(
     server/server.h
 
     config/macros.h
+    config/config.h
     )
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC FRAMEWORK_DLL FRAMEWORK_LIB)

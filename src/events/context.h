@@ -1,5 +1,5 @@
-#ifndef __GTPSFRAMEWORK__CONTEXT__CONTEXT_H__
-#define __GTPSFRAMEWORK__CONTEXT__CONTEXT_H__
+#ifndef __CONTEXT__CONTEXT_H__
+#define __CONTEXT__CONTEXT_H__
 #include "player/player.h"
 #include "server/server.h"
 #include "logger/logger.h"
@@ -12,6 +12,6 @@ namespace framework
             player* m_player;
             server* m_server;
             logger* m_logger;
-    }
+    };
 }
-#endif // __GTPSFRAMEWORK__CONTEXT__CONTEXT_H__
+#endif // __CONTEXT__CONTEXT_H__

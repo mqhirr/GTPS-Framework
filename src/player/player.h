@@ -1,5 +1,5 @@
-#ifndef __GTPSFRAMEWORK__PLAYER__PLAYER_H__
-#define __GTPSFRAMEWORK__PLAYER__PLAYER_H__
+#ifndef __PLAYER__PLAYER_H__
+#define __PLAYER__PLAYER_H__
 #include <iostream>
 #include <vector>
 #include <unordered_map>
@@ -39,6 +39,11 @@ namespace framework
             int m_net_id; // Network ID
             int m_hash; // Hash of the player
             int m_platform; // @m_platform is used to make a "special" update link for player
+
+        public:
+            std::string m_raw_name = ""; // The value we get from login info
+            std::string m_password = ""; // The value we get from login info #2
+            std::string m_display_name = ""; // Used in-game
     };
 }
-#endif // __GTPSFRAMEWORK__PLAYER__PLAYER_H__
+#endif // __PLAYER__PLAYER_H__
