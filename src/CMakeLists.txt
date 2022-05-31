@@ -14,6 +14,6 @@ add_library(
     macros.h
     )
 
-target_compile_definitions(${PROJECT_NAME} PUBLIC FRAMEWORK_DLL FRAMEWORK_LIBRARY)
+target_compile_definitions(${PROJECT_NAME} PUBLIC FRAMEWORK_DLL FRAMEWORK_LIB)
 target_link_libraries(${PROJECT_NAME} PUBLIC enet fmt ${CMAKE_THREAD_LIBS_INIT})
 target_include_directories(${PROJECT_NAME} PRIVATE .)
