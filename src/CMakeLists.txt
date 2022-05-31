@@ -12,7 +12,7 @@ add_library(
     server/server.cc
     server/server.h
 
-    macros.h
+    config/macros.h
     )
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC FRAMEWORK_DLL FRAMEWORK_LIB)
