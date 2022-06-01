@@ -1,4 +1,6 @@
 mkdir include
+mkdir include\enet
+mkdir include\fmt
 mkdir include\config
 mkdir include\events
 mkdir include\logger
@@ -7,6 +9,9 @@ mkdir include\player
 mkdir include\runner
 mkdir include\sdk
 mkdir include\server
+
+copy .\vendor\enet\include\enet\*.h include\enet
+copy .\vendor\fmt\include\fmt\*.h include\fmt
 
 copy .\src\config\config.h include\config\
 copy .\src\config\macros.h include\config\
