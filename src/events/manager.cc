@@ -42,39 +42,4 @@ namespace framework
 
         return false;
     }
-    int GetMessageTypeFromPacket(ENetPacket* packet)
-    {
-        int result;
-        if (packet->dataLength > 3u)
-        {
-            result = *(packet->data);
-        }
-        else
-        {
-            cout << "Bad packet length, ignoring message" << endl;
-            result = 0;
-        }
-        return result;
-    }
-    FRAMEWORK_EXPORT char* manager::GetTextPointerFromPacket(ENetPacket* packet) {
-        char zero = 0;
-        memcpy(packet->data + packet->dataLength - 1, &zero, 1);
-        return (char*)(packet->data + 4);
-    }
-    //If you use this you should make a thread
-    FRAMEWORK_EXPORT void manager::getAction(ENetEvent m_event) {
-        switch(m_event.type) {
-            int messageType = GetMessageTypeFromPacket(event.packet);
-            switch(messageType) {
-                while(true) {
-                    std::string cch = manager::GetTextPointerFromPacket(m_event.packet)
-                    // Halledin Su cchleri yemek yiyecegim
-
-
-                }
-            }
-
-
-        }
-    }
 }

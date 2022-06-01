@@ -1,7 +1,0 @@
-C:/Users/gliese/Desktop/GTPS-Framework/vendor/CMakeFiles/ALL_BUILD.dir
-C:/Users/gliese/Desktop/GTPS-Framework/vendor/CMakeFiles/ZERO_CHECK.dir
-C:/Users/gliese/Desktop/GTPS-Framework/vendor/src/CMakeFiles/gtps-framework.dir
-C:/Users/gliese/Desktop/GTPS-Framework/vendor/vendor/enet/CMakeFiles/enet.dir
-C:/Users/gliese/Desktop/GTPS-Framework/vendor/vendor/enet/CMakeFiles/ALL_BUILD.dir
-C:/Users/gliese/Desktop/GTPS-Framework/vendor/vendor/fmt/CMakeFiles/fmt.dir
-C:/Users/gliese/Desktop/GTPS-Framework/vendor/vendor/fmt/CMakeFiles/ALL_BUILD.dir
