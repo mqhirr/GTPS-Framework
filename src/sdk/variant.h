@@ -31,18 +31,18 @@ namespace framework
     class variantlist
     {
     public:
-        variantlist(const variant& v0) : m_variants({v0}) {}
-        variantlist(const variant& v0, const variant& v1) : m_variants({v0,v1}) {}
-        variantlist(const variant& v0, const variant& v1, const variant& v2) : m_variants({v0,v1,v2}) {}
-        variantlist(const variant& v0, const variant& v1, const variant& v2, const variant& v3) : m_variants({v0,v1,v2,v3}) {}
-        variantlist(const variant& v0, const variant& v1, const variant& v2, const variant& v3, const variant& v4) : m_variants({v0,v1,v2,v3,v4}) {}
-        variantlist(const variant& v0, const variant& v1, const variant& v2, const variant& v3, const variant& v4, const variant& v5) : m_variants({v0,v1,v2,v3,v4,v5}) {}
-        variantlist(const variant& v0, const variant& v1, const variant& v2, const variant& v3, const variant& v4, const variant& v5, const variant& v6) : m_variants({v0,v1,v2,v3,v4,v5,v6}) {}
+        FRAMEWORK_EXPORT variantlist(const variant& v0) : m_variants({v0}) {}
+        FRAMEWORK_EXPORT variantlist(const variant& v0, const variant& v1) : m_variants({v0,v1}) {}
+        FRAMEWORK_EXPORT variantlist(const variant& v0, const variant& v1, const variant& v2) : m_variants({v0,v1,v2}) {}
+        FRAMEWORK_EXPORT variantlist(const variant& v0, const variant& v1, const variant& v2, const variant& v3) : m_variants({v0,v1,v2,v3}) {}
+        FRAMEWORK_EXPORT variantlist(const variant& v0, const variant& v1, const variant& v2, const variant& v3, const variant& v4) : m_variants({v0,v1,v2,v3,v4}) {}
+        FRAMEWORK_EXPORT variantlist(const variant& v0, const variant& v1, const variant& v2, const variant& v3, const variant& v4, const variant& v5) : m_variants({v0,v1,v2,v3,v4,v5}) {}
+        FRAMEWORK_EXPORT variantlist(const variant& v0, const variant& v1, const variant& v2, const variant& v3, const variant& v4, const variant& v5, const variant& v6) : m_variants({v0,v1,v2,v3,v4,v5,v6}) {}
 
         FRAMEWORK_EXPORT int get_type(const variant& var) const;
 
         // gotta make this cleaner, soon.
-        gameupdatepacket_t* pack() const;
+        FRAMEWORK_EXPORT gameupdatepacket_t* pack() const;
 
     private:
         std::vector<variant> m_variants;
