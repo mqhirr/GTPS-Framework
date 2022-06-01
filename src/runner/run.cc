@@ -25,16 +25,16 @@ namespace framework
                     case ENET_EVENT_TYPE_CONNECT:
                     {
                         player* pl = new player(m_server->get_event().peer);
-                        m_logger->log(fmt::format("A new client connected from {}\n", m_server->get_event().peer->address.host));
+                        m_logger->log(fmt::format("A new client connected from {}\n", (char*)m_server->get_event().peer->address.host));
                         pl->greet();
                         pl->variant(variantlist{"OnConsoleMessage", "Welcome to the server!"});
                         break;
                     }
                     case ENET_EVENT_TYPE_RECEIVE:
-                        m_logger->log(fmt::format("Got packet {}\n", m_server->get_event().packet->data));
+                        m_logger->log(fmt::format("Got packet {}\n", (char*)m_server->get_event().packet->data));
                         break;
                     case ENET_EVENT_TYPE_DISCONNECT:
-                        m_logger->log(fmt::format("A client disconnected from {}\n", m_server->get_event().peer->address.host));
+                        m_logger->log(fmt::format("A client disconnected from {}\n", (char*)m_server->get_event().peer->address.host));
                         break;
                     case ENET_EVENT_TYPE_NONE:
                         break;
