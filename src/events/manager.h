@@ -2,6 +2,7 @@
 #define __EVENTS__MANAGER_H__
 #include "context.h"
 #include <vector>
+#include "server/server.h"
 
 namespace framework
 {
@@ -16,6 +17,10 @@ namespace framework
             FRAMEWORK_EXPORT bool call_event(const std::string& event_name, std::function<void(context&)>& fn);
 
             FRAMEWORK_EXPORT size_t events_size() { return m_events.size(); }
+            FRAMEWORK_EXPORT void getAction(ENetEvent m_event); 
+            FRAMEWORK_EXPORT char* GetTextPointerFromPacket(ENetPacket* packet);
+            FRAMEWORK_EXPORT int GetMessageTypeFromPacket(ENetPacket* packet);
+        
         private:
             std::unordered_map<std::string, std::function<void(context&)>> m_events;
     };

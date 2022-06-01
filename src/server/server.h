@@ -13,6 +13,7 @@
 
 #include <enet/enet.h>
 
+
 namespace framework
 {
     class server
@@ -34,9 +35,11 @@ namespace framework
             FRAMEWORK_EXPORT size_t get_players() { return m_players.size(); }
 
             FRAMEWORK_EXPORT int service(uint32_t timeout) { return enet_host_service(m_server, &m_event, timeout); }
-
+        
         private:
+
             /* Special Values */
+            ENetEvent m_event; 
             int m_sid; // Server identifier
             std::string m_name; // Server name
             std::unordered_map<int, player*> m_players; // Player map
@@ -47,7 +50,7 @@ namespace framework
             /* ENet Values */
             ENetHost* m_server; // ENetHost
             ENetAddress m_address; // ENetAddress
-            ENetEvent m_event; // ENetEvent
+            // ENetEvent
             uint16_t m_port; // Server port
             size_t m_max_players; // Max players
     };
