@@ -29,7 +29,7 @@ namespace framework
         return false;
     }
 
-    FRAMEWORK_EXPORT bool manager::call_event(const std::string& event_name, const std::function<void(context&)>& fn)
+    FRAMEWORK_EXPORT bool manager::call_event(const std::string& event_name, std::function<void(context&)>& fn)
     {
         if (auto it = m_events.find(event_name); it != m_events.end())
         {

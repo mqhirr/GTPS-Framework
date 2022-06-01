@@ -13,7 +13,7 @@ namespace framework
             FRAMEWORK_EXPORT void remove_event(const std::string& event_name);
 
             FRAMEWORK_EXPORT bool call_event(const std::string& event_name, context& ctx);
-            FRAMEWORK_EXPORT bool call_event(const std::string& event_name, const std::function<void(context&)>& fn);
+            FRAMEWORK_EXPORT bool call_event(const std::string& event_name, std::function<void(context&)>& fn);
 
             FRAMEWORK_EXPORT size_t events_size() { return m_events.size(); }
         private:
