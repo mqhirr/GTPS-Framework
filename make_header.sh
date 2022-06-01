@@ -1,4 +1,13 @@
 mkdir include
+mkdir include/config
+mkdir include/events
+mkdir include/logger
+mkdir include/math
+mkdir include/player
+mkdir include/runner
+mkdir include/sdk
+mkdir include/server
+
 cp src/config/config.h include/config/
 cp src/config/macros.h include/config/
 
