@@ -22,7 +22,7 @@ namespace framework
         m_logger->log("Not implemented yet.", m_logger->log_types::WARNING);
     }
 
-    FRAMEWORK_EXPORT void player::send_packet(const void* data = nullptr, const uintmax_t& data_size = 0, const uint32_t& flags = 0)
+    FRAMEWORK_EXPORT void player::send_packet(const void* data, const uintmax_t& data_size, const uint32_t& flags)
     {
         ENetPacket* packet = enet_packet_create(data, data_size, flags);
         if (!packet)
@@ -32,7 +32,7 @@ namespace framework
             enet_packet_destroy(packet);
     }
 
-    FRAMEWORK_EXPORT void player::send_packet(const uint32_t& type, const void* data = nullptr, const uintmax_t& data_size = 0, const uint32_t& flags = 0)
+    FRAMEWORK_EXPORT void player::send_packet(const uint32_t& type, const void* data, const uintmax_t& data_size, const uint32_t& flags)
     {
         ENetPacket* packet = enet_packet_create(nullptr, 5 + data_size, flags);
         if (!packet)
@@ -48,7 +48,7 @@ namespace framework
             enet_packet_destroy(packet);
     }
 
-    FRAMEWORK_EXPORT void player::variant(const variantlist& vlist, int net_id = -1, int delay = -1, uint32_t flags = ENET_PACKET_FLAG_RELIABLE)
+    FRAMEWORK_EXPORT void player::variant(const variantlist& vlist, int net_id, int delay, uint32_t flags)
     {
         gameupdatepacket_t* packet = vlist.pack();
 
