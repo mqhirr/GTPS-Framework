@@ -24,6 +24,17 @@ namespace framework
             FRAMEWORK_EXPORT void add_player(player* p_);
             FRAMEWORK_EXPORT void broadcast(const std::function<void(player*)>& f_);
 
+            FRAMEWORK_EXPORT ENetHost* get_host() { return m_server; }
+            FRAMEWORK_EXPORT ENetEvent get_event() { return m_event; }
+
+            FRAMEWORK_EXPORT uint16_t get_port() { return m_port; }
+            FRAMEWORK_EXPORT std::string get_name() { return m_name; }
+
+            FRAMEWORK_EXPORT size_t get_max_players() { return m_max_players; }
+            FRAMEWORK_EXPORT size_t get_players() { return m_players.size(); }
+
+            FRAMEWORK_EXPORT int service(uint32_t timeout) { return enet_host_service(m_server, &m_event, timeout); }
+
         private:
             /* Special Values */
             int m_sid; // Server identifier
@@ -36,7 +47,7 @@ namespace framework
             /* ENet Values */
             ENetHost* m_server; // ENetHost
             ENetAddress m_address; // ENetAddress
-            ENetEvent m_event;
+            ENetEvent m_event; // ENetEvent
             uint16_t m_port; // Server port
             size_t m_max_players; // Max players
     };

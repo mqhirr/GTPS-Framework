@@ -17,8 +17,6 @@ namespace framework
         }
         m_server->checksum = enet_crc32;
         enet_host_compress_with_range_coder(m_server);
-
-        m_logger->log(fmt::format("{} is now open on port {} | version {} ({}) {}\n", m_name, m_port, FRAMEWORK_VERSION, FRAMEWORK_COMMIT, (FRAMEWORK_EXPERIMENTAL ? "Experimental" : "")));
     }
 
     FRAMEWORK_EXPORT server::~server()
@@ -29,7 +27,7 @@ namespace framework
 
     FRAMEWORK_EXPORT void server::add_player(player* p_) 
     { 
-        if (p_->m_raw_name.empty() || p_->get_uid() == NULL) return;
+        if (p_->m_raw_name.empty() || p_->get_uid() < 0) return;
         m_players.insert_or_assign(p_->get_uid(), p_); 
     }
 

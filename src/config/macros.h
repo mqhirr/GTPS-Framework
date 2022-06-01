@@ -11,6 +11,6 @@
     #define FRAMEWORK_EXPORT extern
 #endif /* FRAMEWORK_DLL */  
 #else // !WIN32
-#define FRAMEWORK_EXPORT __attribute__((visibility("default")))
+    #define FRAMEWORK_EXPORT __attribute__((visibility("default")))
 #endif
 #endif // __MACROS_H__

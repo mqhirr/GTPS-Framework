@@ -1,4 +1,8 @@
 cmake_minimum_required(VERSION 3.10)
+
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
 find_package(Threads REQUIRED)
 
 add_library(
@@ -14,7 +18,21 @@ add_library(
 
     config/macros.h
     config/config.h
-    )
+
+    runner/runner.cc
+    runner/runner.h
+
+    math/math.h
+    
+    sdk/variant.cc
+    sdk/variant.h
+    sdk/packet.h
+    sdk/update.h
+
+    events/manager.cc
+    events/manager.h
+    events/context.h
+)
 
 target_compile_definitions(${PROJECT_NAME} PUBLIC FRAMEWORK_DLL FRAMEWORK_LIB)
 target_link_libraries(${PROJECT_NAME} PUBLIC enet fmt ${CMAKE_THREAD_LIBS_INIT})
