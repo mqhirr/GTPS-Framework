@@ -19,8 +19,8 @@ add_library(
     config/macros.h
     config/config.h
 
-    runner/runner.cc
-    runner/runner.h
+    runner/run.cc
+    runner/run.h
 
     math/math.h
     
